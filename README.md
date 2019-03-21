@@ -2,6 +2,7 @@
 
 ## Status
 
+[![Build Status](https://travis-ci.org/lucassscaravelli/flight-search.svg?branch=master)](https://travis-ci.org/lucassscaravelli/flight-search)
 
 ## Para rodar o projeto basta:
 
