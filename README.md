@@ -2,6 +2,7 @@
 
 ## Status
 
+[![Build Status](https://travis-ci.org/lucassscaravelli/flight-search.svg?branch=master)](https://travis-ci.org/lucassscaravelli/flight-search) [![Coverage Status](https://coveralls.io/repos/github/lucassscaravelli/flight-search/badge.svg?branch=master)](https://coveralls.io/github/lucassscaravelli/flight-search?branch=master)
 
 ## Para rodar o projeto basta:
 
