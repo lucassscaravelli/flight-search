@@ -5,6 +5,10 @@ class AxiosMock {
     return this;
   }
 
+  post() {
+    return this;
+  }
+
   then(sucessCallback) {
     this.successCallback = sucessCallback;
     return this;
@@ -27,6 +31,7 @@ class AxiosMock {
 export const mockAxiosAndGenerateSpies = () => {
   const mockAxios = new AxiosMock();
 
+  const spyOnPost = spyOn(axios, 'post').and.callFake(() => mockAxios);
   const spyOnGet = spyOn(axios, 'get').and.callFake(() => mockAxios);
   const spyOnThen = spyOn(mockAxios, 'then').and.callThrough();
   const spyOnCatch = spyOn(mockAxios, 'catch').and.callThrough();
@@ -38,6 +43,7 @@ export const mockAxiosAndGenerateSpies = () => {
     callThen,
     callCatch,
     spyOnGet,
+    spyOnPost,
     spyOnThen,
     spyOnCatch,
   };
