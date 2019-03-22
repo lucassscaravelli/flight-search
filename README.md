@@ -7,8 +7,9 @@
 ## Para rodar o projeto basta:
 
 1. ```git clone https://github.com/lucassscaravelli/flight-search.git```
+2. ```cd flight-search```
 2. ```docker build -t flight-search .```
-3. ```dokcer run -p 8080:8080 -d flight-search```
+3. ```docker run -p 8080:80 -d flight-search```
 4. Acessar a url ```http://0.0.0.0:8080/home```
 
 ## Tecnologias utilizadas
