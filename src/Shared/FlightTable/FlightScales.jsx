@@ -14,7 +14,10 @@ export const FlightScales = ({ scales }) => (
             {scales.map(({
               origem, destino, saida, chegada,
             }) => (
-              <tr key={`${origem}-${destino}-${saida}-${chegada}`}>
+              <tr
+                key={`${origem}-${destino}-${saida}-${chegada}`}
+                data-testid={`${origem}-${destino}-${saida}-${chegada}`}
+              >
                 <td>
                   {`${origem} (${saida})`}
                   <Icon className="icon-trip" type="double-right" />
@@ -25,10 +28,12 @@ export const FlightScales = ({ scales }) => (
           </table>
 )}
       >
-        <Button shape="circle">{scales.length - 1}</Button>
+        <Button data-testid="popover-button" shape="circle">
+          {scales.length - 1}
+        </Button>
       </Popover>
     ) : (
-      '-'
+      <span data-testid="empty-scales">-</span>
     )}
   </div>
 );

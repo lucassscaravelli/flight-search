@@ -52,12 +52,14 @@ export const FlightTable = ({
       key="value"
       dataIndex="value"
       defaultSortOrder="ascend"
-      render={value =>
-        `R$ ${value
-          .toFixed(2)
-          .toString()
-          .replace('.', ',')}`
-      }
+      render={value => (
+        <span data-testid={`value-${value}`}>
+          {`R$ ${value
+            .toFixed(2)
+            .toString()
+            .replace('.', ',')}`}
+        </span>
+      )}
       sorter={(a, b) => a.value - b.value}
       title="Valor"
     />
@@ -83,7 +85,7 @@ FlightTable.propTypes = {
           chegada: PropTypes.string.isRequired,
           valor: PropTypes.number.isRequired,
         }),
-      ).isRequired,
+      ),
     }),
   ),
   flightCompanies: PropTypes.arrayOf(
