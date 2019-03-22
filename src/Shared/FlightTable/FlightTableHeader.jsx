@@ -107,7 +107,7 @@ class FlightTableHeader extends React.Component {
                   <Col lg={11} md={11} xs={24}>
                     <Form.Item>
                       <Button htmlType="submit" type="primary">
-                        Procurar Voos
+                        {'Procurar Voos'}
                       </Button>
                     </Form.Item>
                   </Col>
